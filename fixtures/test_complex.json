@@ -1,0 +1,14 @@
+{
+        "customer": [
+                {
+                "id": 9999,
+                "name": "バナナ",
+                "address": "10 Red Road, Akihabara, Tokyo"
+                },
+                {
+                "id": 1000,
+                "name": "Paulo Ferraz",
+                "address": "18, Fco Martins, RS, Porto Alegre"
+                }
+        ]
+}
