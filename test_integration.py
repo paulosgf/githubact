@@ -14,7 +14,7 @@ class TestComplexData(unittest.TestCase):
 
     def test_existence_of_custome(self):
         self.assertEqual(self.clienttest["name"], "バナナ")
-        self.assertEqual(self.clienttest["address"], "10 Red Road, Akihabara, Tokyo")
+        self.assertEqual(self.clienttest["address"], "1 Red Road, Akihabara, Tokyo")
 
 if __name__ == '__main__':
     unittest.main()
