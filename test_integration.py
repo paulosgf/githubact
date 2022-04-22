@@ -3,9 +3,10 @@
 import unittest
 import json
 
+
 class TestComplexData(unittest.TestCase):
     def setUp(self):
-        with open('fixtures/test_complex.json', 'r', encoding="utf-8") as myfile:
+        with open("fixtures/test_complex.json", "r", encoding="utf-8") as myfile:
             data = json.load(myfile)
         for self.clientname in data["customer"]:
             if self.clientname["id"] == 9999:
@@ -16,5 +17,6 @@ class TestComplexData(unittest.TestCase):
         self.assertEqual(self.clienttest["name"], "バナナ")
         self.assertEqual(self.clienttest["address"], "1 Red Road, Akihabara, Tokyo")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
