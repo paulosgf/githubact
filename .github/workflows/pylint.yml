@@ -25,4 +25,5 @@ jobs:
       run: |
         flake8 --exclude .git,.github,.idea,__pycache__,venv
     - name: Analysing the code with black
+      run: |
         black --verbose --check --exclude .git,.github,.idea,__pycache__,venv .
