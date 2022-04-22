@@ -23,7 +23,7 @@ jobs:
         pylint --disable=C0114,C0115,C0116 $(git ls-files '*.py')
     - name: Analysing the code with flake8
       run: |
-        flake8 --exclude .git,.github,.idea,__pycache__,venv
+        flake8 --exclude .git,.github,.idea,__pycache__,venv --max-line-length=85
     - name: Analysing the code with black
       run: |
         black --verbose --check --exclude .git,.github,.idea,__pycache__,venv .
