@@ -1,7 +1,14 @@
 name: Pylint
 
-on: [push]
-
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'fixtures/**'
+    pull_request:
+      - 'fixtures/**'
+        
 jobs:
   build:
     runs-on: ubuntu-latest
