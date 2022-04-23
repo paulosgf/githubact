@@ -27,6 +27,6 @@ jobs:
     - name: Analysing the code with black
       run: |
         black --verbose --check --exclude .git,.github,.idea,__pycache__,venv .
-    - name: Analysing the code with black
+    - name: Analysing the code with bandit
       run: |
         bandit -ll -r . -x .git,.github,.idea,__pycache__,venv
