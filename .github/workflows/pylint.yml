@@ -26,7 +26,7 @@ jobs:
         flake8 --exclude .git,.github,.idea,__pycache__,venv,foo --max-line-length=85
     - name: Analysing the code with black
       run: |
-        black --verbose --check --exclude .git,.github,.idea,__pycache__,venv,foo .
+        black --verbose --check --exclude='(\.git|\.github|\.idea|__pycache__|venv|foo)' .
     - name: Analysing the code with bandit
       run: |
         bandit -ll -r . -x .git,.github,.idea,__pycache__,venv,foo
