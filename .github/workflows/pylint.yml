@@ -23,7 +23,7 @@ jobs:
         pip install pylint flake8 black bandit
     - name: Analysing the code with pylint
       run: |
-        pylint --disable=C0114,C0115,C0116 --ignore=foo/bar.py *.py fixtures/*
+        pylint --disable=C0114,C0115,C0116 --ignore=foo/bar.py *.py fixtures/*.py
     - name: Analysing the code with flake8
       run: |
         flake8 --exclude .git,.github,.idea,__pycache__,venv --max-line-length=85
