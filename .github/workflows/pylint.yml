@@ -4,10 +4,7 @@ on:
   push:
     paths-ignore:
       - 'fixtures/**'
-  pull_request:
-    paths-ignore:
-      - 'fixtures/**'
-        
+       
 jobs:
   build:
     runs-on: ubuntu-latest
