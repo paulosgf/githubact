@@ -6,7 +6,8 @@ on:
       - main
     paths-ignore:
       - 'fixtures/**'
-    pull_request:
+  pull_request:
+    paths-ignore:
       - 'fixtures/**'
         
 jobs:
