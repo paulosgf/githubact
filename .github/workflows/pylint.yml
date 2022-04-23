@@ -1,10 +1,11 @@
 name: Pylint
 
-on: 
+on:
   push:
-    paths-ignore:
-      - 'foo/**'
-       
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,10 +27,10 @@ jobs:
         pylint --disable=C0114,C0115,C0116 --ignore=foo/bar.py,fixtures/ *.py
     - name: Analysing the code with flake8
       run: |
-        flake8 --exclude .git,.github,.idea,__pycache__,venv --max-line-length=85
+        flake8 --exclude .git,.github,.idea,__pycache__,venv,foo --max-line-length=85
     - name: Analysing the code with black
       run: |
-        black --verbose --check --exclude .git,.github,.idea,__pycache__,venv .
+        black --verbose --check --exclude .git,.github,.idea,__pycache__,venv,foo .
     - name: Analysing the code with bandit
       run: |
-        bandit -ll -r . -x .git,.github,.idea,__pycache__,venv
+        bandit -ll -r . -x .git,.github,.idea,__pycache__,venv,foo
