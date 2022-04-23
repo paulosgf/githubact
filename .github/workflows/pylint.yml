@@ -1,12 +1,6 @@
 name: Pylint
 
-on: 
-  push:
-    paths-ignore:
-      - 'fixtures/**'
-  pull_request:
-    paths-ignore: 
-      - 'fixtures/**'
+on: [push]
         
 jobs:
   build:
