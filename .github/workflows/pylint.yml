@@ -4,6 +4,8 @@ on:
   push:
     paths-ignore:
       - 'fixtures/**'
+    pull_request:
+      - 'fixtures/**'
         
 jobs:
   build:
