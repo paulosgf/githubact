@@ -30,3 +30,6 @@ jobs:
     - name: Analysing the code with bandit
       run: |
         bandit -ll -r . -x .git,.github,.idea,__pycache__,venv,foo
+    - name: Run Tests
+      run: |
+        python test_integration.py
