@@ -29,7 +29,7 @@ jobs:
         black --verbose --check --exclude='(\.git|\.github|\.idea|__pycache__|venv|githubact\/fixtures\/test_complex\.json|setup\.py)' .
     - name: Analysing the code with bandit
       run: |
-        bandit -ll -r . -x .git,.github,.idea,__pycache__,venv,githubact/fixtures/test_complex.json,setup.py
+        bandit -ll -r . -x .git,.github,.idea,__pycache__,venv,setup.py,githubact/fixtures/test_complex.json
     - name: Run Tests
       run: |
         python test_integration.py
