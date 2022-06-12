@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 PACKAGE = "githubact"
 NAME = "githubact"
@@ -12,24 +12,20 @@ setup(
     name=NAME,
     version=VERSION,
     description=DESCRIPTION,
-    long_description=read("README.rst"),
+    long_description=open("README.md").read(),
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     license="BSD",
     url=URL,
     packages=find_packages(exclude=["tests.*", "tests"]),
-    package_data=find_package_data(
-   PACKAGE,
-   only_in_packages=False
-   ),
-    classifiers=[
-        "Development Status :: 0 - Dev",
-        "Environment :: CI/CD Test",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python",
-        "Framework :: None",
-    ],
-    zip_safe=False,
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Framework :: Django",
+],
+zip_safe=False,    
 )
